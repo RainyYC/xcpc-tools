@@ -2,6 +2,8 @@
 
 A tool for CN XCPC contests
 
+UESTC Modified Ver.
+
 - 代码打印和小票机打印（全平台支持）
 - 支持封榜期间发放鼓励气球
 - 支持连接 DOMjudge 与 Hydro 系统，同时亦可独立运行
