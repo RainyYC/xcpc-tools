@@ -44,6 +44,7 @@ password:
             balloonLang: 'zh',
             balloonType: 80,
             printColor: false,
+            printPageMax: 5,
             printers,
         });
         fs.writeFileSync(configPath, isClient ? clientConfigDefault : serverConfigDefault);
@@ -90,6 +91,7 @@ const clientSchema = Schema.object({
     balloonLang: Schema.union(['zh', 'en']).default('zh').required(),
     balloonType: Schema.union([58, 80]).default(80),
     printColor: Schema.boolean().default(false),
+    printPageMax: Schema.number().default(5),
     printers: Schema.array(Schema.string()).default([]).description('printer id list, will disable printing if unset'),
     token: Schema.string().required().description('Token generated on server'),
     fonts: Schema.array(Schema.string()).default([]),
